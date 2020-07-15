@@ -1,209 +1,180 @@
-import Head from 'next/head'
+import Link from 'next/link'
+import Meta from '../components/meta'
+import { TiSocialGithub, TiSocialFacebook, TiSocialInstagram, TiSocialTwitter } from 'react-icons/ti'
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default () => {
+    return(
+            <div className="frame">
+                <Meta title="Bay Area Hackathons"/>
+                <div className="segment">
+                    <img src="/static/btext.png"/>
+                    <div className="slog">Bringing the hacker community closer together</div>
+                    <div className="buttons">
+                        <Link href="/join">
+                            <div className="blue button">Join</div>
+                        </Link>
+                        <Link href="/about">
+                            <div className="orange button">About</div>
+                        </Link>
+                        <Link href="/apply">
+                            <div className="magenta button">Apply</div>
+                        </Link>
+                    </div>
+                </div>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+                <div className="segment">
+                    <div className="socials">
+                        <a href="#">
+                            <TiSocialFacebook className="cyan social"/>
+                        </a>
+                        <a href="#">
+                            <TiSocialGithub className="violet social"/>
+                        </a>
+                        <a href="#">
+                            <TiSocialInstagram className="azure social"/>
+                        </a>
+                        <a href="#">
+                            <TiSocialTwitter className="red social"/>
+                        </a>
+                    </div>
+                    <img className="blogo" src="/static/blogo.png"/>
+                </div>
+                <style jsx global>{`
+                    html, body{
+                        background: #101010;
+                        color: #c0c0c0;
+                        font-family: Roboto Condensed;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100vw;
+                        height: 100vh;
+                        margin: 0;
+                    }
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+                    @media(min-width: 650px){
+                        .frame{
+                            width: 600px;
+                            height: 350px;
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                            display: flex;
+                            justify-content: space-between;
+                        }
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                        .segment {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                        }
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                        .btext {
+                            width: 450px;
+                        }
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+                        .buttons {
+                            display: flex;
+                            width: 420px;
+                            justify-content: space-between;
+                        }
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+                        .button {
+                            width: 120px;
+                            height: 40px;
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+                            border: 2.25px solid #c0c0c0;
+                            border-radius: 8px;
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+                            transition: 250ms ease;
+                        }
 
-        footer img {
-          margin-left: 0.5rem;
-        }
+                        .button:hover, .social:hover {
+                            color: #101010;
+                            cursor: pointer;
+                            box-shadow: 5px 5px 0px #c0c0c0;
 
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+                            transform: translate(-5px, -5px);
+                        }
 
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
+                        .blue:hover {
+                            border: 2.25px solid #a3b8ef;
+                            background: #a3b8ef;
+                        }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
+                        .green:hover {
+                            border: 2.25px solid #80c990;
+                            background: #80c990;
+                        }
 
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
+                        .orange:hover {
+                            border: 2.25px solid #e0af85;
+                            background: #e0af85;
+                        }
 
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
+                        .magenta:hover {
+                            border: 2.25px solid #e6a3dc;
+                            background: #e6a3dc;
+                        }
 
-        .title,
-        .description {
-          text-align: center;
-        }
+                        .aquamarine:hover {
+                            border: 2.25px solid #5accaf;
+                            background: #5accaf;
+                        }
 
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
+                        .azure:hover {
+                            border: 2.25px solid #74c3e4;
+                            background: #74c3e4;
+                        }
 
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
+                        .red:hover {
+                            border: 2.25px solid #efa6a2;
+                            background: #efa6a2;
+                        }
 
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
+                        .rose:hover {
+                            border: 2.25px solid #f2a2c2;
+                            background: #f2a2c2;
+                        }
 
-          max-width: 800px;
-          margin-top: 3rem;
-        }
+                        .cyan:hover {
+                            border: 2.25px solid #50cacd;
+                            background: #50cacd;
+                        }
 
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
+                        .violet:hover {
+                            border: 2.25px solid #ccaced;
+                            background: #ccaced;
+                        }
 
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
+                        .blogo {
+                            width: 100px;
+                        }
 
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
+                        .social {
+                            font-size: 30px;
+                            padding: 2.75px;
+                            color: #c0c0c0;
+                            border: 2.25px solid #c0c0c0;
+                            border-radius: 20px;
+                            transition: 250ms ease;
+                        }
 
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
+                        .socials {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 230px;
+                        }
 
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+                        .slog {
+                            font-size: 24px;
+                        }
+                    }
+                `} </style>
+            </div>
+    )
 }
