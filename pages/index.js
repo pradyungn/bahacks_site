@@ -5,41 +5,43 @@ import { TiSocialGithub, TiSocialFacebook, TiSocialInstagram, TiSocialTwitter } 
 export default () => {
     return(
         <div className="frame">
-          <Meta title="Bay Area Hackathons"/>
-          <div className="segment">
-            <img src="/static/btext.png" className="btext"/>
-            <div className="slog">Bringing the hacker community closer together</div>
-            <div className="buttons">
-              <Link href="/join">
-                <div className="blue button">Join</div>
-              </Link>
-              <Link href="/about">
-                <div className="orange button">About</div>
-              </Link>
-              <Link href="/apply">
-                <div className="magenta button">Apply</div>
-              </Link>
+            <Meta title="Bay Area Hackathons"/>
+            <div className="segment">
+                <img src="/static/btext.png" className="btext"/>
+                <div className="slog">Bringing the hacker community closer together</div>
+                <div className="buttons">
+                    <Link href="/join">
+                        <div className="blue button">Join</div>
+                    </Link>
+                    <Link href="/listings">
+                        <div className="orange button">Listings</div>
+                    </Link>
+                    <Link href="/apply">
+                        <div className="magenta button">Apply</div>
+                    </Link>
+                </div>
             </div>
-          </div>
 
-          <div className="segment">
-            <div className="socials">
-              <a href="#">
-                <TiSocialFacebook className="cyan social"/>
-              </a>
-              <a href="#">
-                <TiSocialGithub className="violet social"/>
-              </a>
-              <a href="#">
-                <TiSocialInstagram className="azure social"/>
-              </a>
-              <a href="#">
-                <TiSocialTwitter className="red social"/>
-              </a>
+            <div className="segment">
+                <div className="socials">
+                    <a href="#">
+                        <TiSocialFacebook className="cyan social"/>
+                    </a>
+                    <a href="#">
+                        <TiSocialGithub className="violet social"/>
+                    </a>
+                    <a href="#">
+                        <TiSocialInstagram className="azure social"/>
+                    </a>
+                    <a href="#">
+                        <TiSocialTwitter className="red social"/>
+                    </a>
+                </div>
+                <Link href="/about">
+                    <img className="blogo" src="/static/blogo.png"/>
+                </Link>
             </div>
-            <img className="blogo" src="/static/blogo.png"/>
-          </div>
-          <style jsx global>{`
+            <style jsx global>{`
             html, body{
                 background: #101010;
                 color: #c0c0c0;
@@ -170,6 +172,12 @@ export default () => {
 
                 .blogo {
                     width: 100px;
+                    transition: 250ms ease;
+                }
+
+                .blogo:hover {
+                    cursor: pointer;
+                    transform: scale(1.1, 1.1);
                 }
 
                 .socials {
