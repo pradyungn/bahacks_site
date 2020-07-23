@@ -5,7 +5,7 @@ let colors = ["blue", "orange", "rose", "violet", "green"]
 
 function Tile(props) {
     return(
-        <a href={props.link} className="tile">
+        <a href={props.link} target="_blank" className="tile">
             <div>
                 <div className="top"> <div>{props.name}</div>
                     <div className="category" style={{backgroundColor: "var(--" + colors[indices.indexOf(props.category)] + ")"}}>{props.category}</div>
@@ -121,7 +121,7 @@ export async function getServerSideProps() {
                 events: await new Promise((resolve, reject) => {
                     const events = []
                     base('Public')
-                        .select({ maxRecords: 3, view: 'Grid view' })
+                        .select({view: 'Grid view' })
                         .eachPage((records, fetchNextPage) => {
                             events.push(...records.map(({ fields }) => fields))
                             fetchNextPage()

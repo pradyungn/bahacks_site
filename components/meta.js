@@ -5,6 +5,7 @@ export default (props) => {
         <>
             <Head>
                 <title>{props.title}</title>
+                <link rel="icon" href="https://bahacks.vercel.app/static/blogo.png"/>
             </Head>
         </>
     )

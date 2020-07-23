@@ -18,7 +18,9 @@ export default (props) => {
                         <Link href="/apply"><a className="glink hrlink">Apply</a></Link>
                     </div>
                 </div>
-                {props.children}
+                <div id="content">
+                    {props.children}
+                </div>
             </div>
             <Footer/>
             <style jsx global>{`
@@ -224,6 +226,10 @@ export default (props) => {
 
             .mlink:hover {
                 color: var(--magenta);
+            }
+
+            #content > div {
+               margin-bottom: 10px; 
             }
 
             `} </style>

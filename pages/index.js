@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Meta from '../components/meta'
-import { TiSocialGithub, TiSocialFacebook, TiSocialInstagram, TiSocialTwitter } from 'react-icons/ti'
+import { TiSocialGithub, TiMessage, TiSocialInstagram, TiSocialTwitter } from 'react-icons/ti'
 
 export default () => {
     return(
@@ -10,8 +10,8 @@ export default () => {
                 <img src="/static/btext.png" className="btext"/>
                 <div className="slog">Bringing the hacker community closer together</div>
                 <div className="buttons">
-                    <Link href="/join">
-                        <div className="blue button">Join</div>
+                    <Link href="/about">
+                        <div className="blue button">About</div>
                     </Link>
                     <Link href="/listings">
                         <div className="orange button">Listings</div>
@@ -25,7 +25,7 @@ export default () => {
             <div className="segment">
                 <div className="socials">
                     <a href="#">
-                        <TiSocialFacebook className="cyan social"/>
+                        <TiMessage className="cyan social"/>
                     </a>
                     <a href="#">
                         <TiSocialGithub className="violet social"/>
@@ -37,9 +37,10 @@ export default () => {
                         <TiSocialTwitter className="red social"/>
                     </a>
                 </div>
-                <Link href="/about">
+
+                <a href="https://www.pradyungn.tech">
                     <img className="blogo" src="/static/blogo.png"/>
-                </Link>
+                </a>
             </div>
             <style jsx global>{`
             html, body{
