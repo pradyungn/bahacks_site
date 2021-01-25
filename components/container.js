@@ -5,7 +5,7 @@ import Footer from './footer'
 export default (props) => {
     return(
         <div className="container">
-            <Meta title={props.title}/>
+            <Meta title={props.title} desc={props.desc}/>
             <div>
                 <div className="navbar">
                     <Link href="/">

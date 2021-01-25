@@ -5,7 +5,7 @@ import { TiSocialGithub, TiMessage, TiSocialInstagram, TiSocialTwitter } from 'r
 export default () => {
     return(
         <div className="frame">
-            <Meta title="Bay Area Hackathons"/>
+            <Meta title="Bay Area Hackathons" desc="A community of hackathon-goers in the bay area!"/>
             <div className="segment">
                 <img src="/static/btext.png" className="btext"/>
                 <div className="slog">Bringing the hacker community closer together</div>

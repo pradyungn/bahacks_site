@@ -62,7 +62,7 @@ function Array(props) {
 
 const main = (props) => {
     return(
-            <Container title="Listings">
+            <Container title="Listings" desc="Hackathons, opportunities, and car dealerships.">
                 <h1>Listings</h1>
                 <div className="center">Events, Opportunities, and car dealerships.</div>
                 <Array events={props.events}/>
